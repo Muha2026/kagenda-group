@@ -12,9 +12,7 @@ if 'user' not in st.session_state:
 if 'role' not in st.session_state:
     st.session_state.role = None
 
-# Maintenant, votre ligne 7 ne causera plus d'erreur :
-if st.session_state.auth:
-    # ... votre code principal ...
+# Maintenant, votre ligne 7 ne causera plus d'erreur :..
 if st.session_state.auth:
     # 1. Établir la connexion à la base locale AVANT tout le reste
     conn = sqlite3.connect('boutique.db', check_same_thread=False)
@@ -574,5 +572,6 @@ elif menu == "☎️ Aide & Support":
         if st.form_submit_button("Envoyer la demande"):
             # Ici, comme c'est local, on simule l'envoi
             st.success("Votre demande a été enregistrée. Pacy MHA vous contactera sous peu.")
+
 
 
